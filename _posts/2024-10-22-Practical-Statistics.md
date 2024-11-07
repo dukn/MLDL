@@ -138,6 +138,51 @@ Khi kích thước mẫu đủ lớn, phân phối của trung bình mẫu (ho�
 
 **Kích thước mẫu lớn:** Định lý này bắt đầu đúng khi kích thước mẫu (số lượng phần tử trong mỗi mẫu) đủ lớn. Mặc dù không có một ngưỡng chính thức cho "đủ lớn", nhưng thường thì kích thước mẫu từ 30 trở lên là đủ để phân phối của trung bình mẫu gần với phân phối chuẩn.
 
+**Standard Error (SE)**, hay **Sai số chuẩn**, là một khái niệm quan trọng trong thống kê, dùng để đo lường sự phân tán (biến động) của một ước lượng thống kê, thường là trung bình mẫu, so với giá trị trung bình thực sự của quần thể.
+
+- Định nghĩa: Standard Error (SE) là độ lệch chuẩn của phân phối mẫu của một ước lượng thống kê (thường là trung bình mẫu). Nó cho biết mức độ không chắc chắn hoặc độ biến động của ước lượng này khi thực hiện nhiều lần lấy mẫu từ cùng một quần thể.
+
+- Sự khác biệt với độ lệch chuẩn: Độ lệch chuẩn (standard deviation) của quần thể đo lường sự phân tán của các giá trị trong quần thể. Trong khi đó, sai số chuẩn (SE) đo lường sự phân tán của các trung bình mẫu (hoặc các ước lượng thống kê khác) khi ta lấy nhiều mẫu từ quần thể. Nói cách khác, SE cho biết trung bình mẫu có thể dao động bao nhiêu quanh trung bình quần thể.
+
+Công thức tính Standard Error:
+
+Đối với *trung bình mẫu* (\(\bar{X}\)), công thức sai số chuẩn là:
+
+\[
+SE = \frac{\sigma}{\sqrt{n}}
+\]
+
+- \(\sigma\) là độ lệch chuẩn của quần thể.
+- \(n\) là kích thước mẫu.
+
+Nếu độ lệch chuẩn của quần thể (\(\sigma\)) không có sẵn (ví dụ trong các nghiên cứu thực tế), ta có thể thay thế bằng độ lệch chuẩn mẫu (\(s\)), và công thức trở thành:
+
+\[
+SE = \frac{s}{\sqrt{n}}
+\]
+
+Ý nghĩa của Standard Error:
+
+1. Đo sự biến động: SE cung cấp một phép đo về mức độ biến động của trung bình mẫu so với trung bình quần thể. Nếu SE nhỏ, điều đó có nghĩa là trung bình mẫu gần với trung bình quần thể, và ngược lại.
+
+2. Kích thước mẫu: SE giảm khi kích thước mẫu \(n\) tăng. Điều này phản ánh rằng với mẫu lớn, ta sẽ có ước lượng trung bình chính xác hơn về trung bình quần thể (vì trung bình mẫu có xu hướng tiệm cận trung bình quần thể khi \(n\) lớn hơn).
+
+3. Độ tin cậy: Khi SE nhỏ, ta có thể tự tin hơn vào kết quả ước lượng. Ngược lại, SE lớn cho thấy sự không chắc chắn cao về giá trị trung bình mẫu, dẫn đến độ tin cậy thấp hơn.
+
+### Bootstrap
+**Bootstrap sampling** là một kỹ thuật thống kê được sử dụng rộng rãi để ước lượng các thông số của một phân phối xác suất khi không có thông tin chi tiết về phân phối đó. Thay vì đưa ra các giả định về phân phối, bootstrap sampling sử dụng lại dữ liệu hiện có để tạo ra nhiều mẫu dữ liệu mới (gọi là bootstrap samples).
+
+Về mặt khái niệm, bạn có thể tưởng tượng bootstrap là sao chép (duplicate) mẫu gốc hàng nghìn hoặc hàng triệu lần để bạn có một quần thể giả định bao gồm tất cả thông tin từ mẫu gốc của bạn (chỉ lớn hơn). Sau đó, bạn có thể lấy mẫu từ quần thể giả định này để ước tính phân phối mẫu.
+
+Bootstrap là một phương pháp mạnh mẽ và có thể áp dụng trong nhiều tình huống khi các phương pháp thống kê truyền thống không áp dụng được hoặc khi ta không có thông tin về phân phối của quần thể. Cụ thể, bạn nên sử dụng Bootstrap sampling trong các trường hợp sau:
+- Khi không biết phân phối của quần thể.
+- Khi không thể tính toán tham số trực tiếp.
+- Để ước lượng khoảng tin cậy (Confidence Interval)
+- Khi các giả định trong mô hình không thỏa mãn
+- Kiểm định giả thuyết (Hypothesis testing)
+
+### Confidence Intervals
+
 
 
 ## Statistical Experiments and Significance Testing
