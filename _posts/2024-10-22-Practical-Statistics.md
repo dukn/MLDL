@@ -116,6 +116,29 @@ Lấy mẫu có nhiều ý nghĩa trong phân tích và tính toán dữ liệu,
 
 ### Random Sampling and Sample Bias
 
+**Selection Bias** hay thiên lệch lựa chọn là hiện tượng say ra khi mẫu được lựa chọn không đại diện cho tập dữ liệu ta muốn nghiên cứu. Điều này có thể dẫn tới kết quả không chính xác hoặc sai lệch, vì mẫu không phản ánh được các đặc điểm của dữ liệu.
+
+**Regression to the mean** hay hồi quy về giá trị trung bình mô tả hiện tượng các dữ liệu/quan sát cực đoan (extreme observations) có xu hướng sẽ thay đổi về điểm trung bình hoặc giá trị kỳ vọng khi được đo lại hoặc qua các lần quan sát sau.
+
+Ví dụ điểm số của một học sinh cao bất thường ở 1 bài kiểm tra sẽ có xu hướng về lại giá trị trung bình sau các bài thi tiếp theo. Lý do có thể là vì bài kiểm tra vừa rồi đề dễ hoặc học sinh này rất may mắn. Việc hiểu và đánh giá đúng *Regression to the mean* giúp ta tránh hiểu nhầm và rút ra các kết luận không chính xác từ các quan sát ban đầu.
+
+### Sampling Distribution of a Statistic
+
+**Sampling Distribution** hay thống kê mẫu đề cập đến sự phân phối của một số thống kê trên một số mẫu lấy từ một quần thể (population).
+
+**Central Limit Theorem (CLT)**, hay Định lý giới hạn trung tâm, là một trong những định lý cơ bản và quan trọng nhất trong lý thuyết xác suất và thống kê. Định lý này phát biểu rằng:
+
+```
+Khi kích thước mẫu đủ lớn, phân phối của trung bình mẫu (hoặc tổng mẫu) sẽ xấp xỉ phân phối chuẩn (Gaussian), bất kể phân phối của quần thể ban đầu là gì.
+```
+
+**Quần thể ban đầu:** Có thể có bất kỳ phân phối nào, ví dụ: phân phối đều, phân phối mũ, phân phối lệch, v.v.
+
+**Trung bình mẫu:** Là trung bình của một mẫu ngẫu nhiên được lấy từ quần thể. Nếu bạn lấy nhiều mẫu ngẫu nhiên từ quần thể, tính trung bình của từng mẫu và sau đó vẽ đồ thị phân phối của các giá trị trung bình mẫu, thì phân phối đó sẽ dần dần trở nên gần với phân phối chuẩn khi kích thước mẫu tăng lên.
+
+**Kích thước mẫu lớn:** Định lý này bắt đầu đúng khi kích thước mẫu (số lượng phần tử trong mỗi mẫu) đủ lớn. Mặc dù không có một ngưỡng chính thức cho "đủ lớn", nhưng thường thì kích thước mẫu từ 30 trở lên là đủ để phân phối của trung bình mẫu gần với phân phối chuẩn.
+
+
 
 ## Statistical Experiments and Significance Testing
 
