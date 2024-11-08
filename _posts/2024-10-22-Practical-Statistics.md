@@ -183,7 +183,13 @@ Bootstrap là một phương pháp mạnh mẽ và có thể áp dụng trong nh
 
 ### Confidence Intervals
 
+Khoảng tin cậy (Confidence Interval - CI) Cho phép ta đánh giá độ tin cậy của một ước tính. 
+Một phương pháp tính khoảng tin cậy là dùng boostrap để lấy mẫu, rồi tính khoảng tin cây từ kết quả lấy mẫu của Boostrap như từ range 5%-95% giá trị sẽ là khoảng tin cậy 90%.
 
+### Phân phối chuẩn
+
+Phân phối chuẩn - Normal Distribution - Gauss Distribution là phân phối quan trọng nhất của thống kê, nó có giá trị trung bình bằng 0 và độ lệch chuẩn bằng 1.
+ 
 
 ## Statistical Experiments and Significance Testing
 
